@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerador de Senhas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- FUNDO ANIMADO -->
+  <div class="background">
+    <!-- PÍLULAS -->
+    <span class="pill"></span>
+    <span class="pill"></span>
+    <span class="pill"></span>
+    <span class="pill"></span>
+    <span class="pill"></span>
+    <span class="pill"></span>
+    <span class="pill"></span>
+    <span class="pill"></span>
+    <span class="pill"></span>
+    <span class="pill"></span>
+
+    <!-- + -->
+    <span class="plus">+</span>
+    <span class="plus">+</span>
+    <span class="plus">+</span>
+    <span class="plus">+</span>
+    <span class="plus">+</span>
+    <span class="plus">+</span>
+    <span class="plus">+</span>
+    <span class="plus">+</span>
+  </div>
+
+  <!-- CONTEÚDO -->
+  <main class="container">
+    <h1>Gerador de Senhas</h1>
+
+    <div class="card">
+      <label>Tamanho da senha</label>
+      <input type="number" id="length" value="12" min="6" max="32">
+
+      <div class="options">
+        <label><input type="checkbox" id="lower" checked> Letras minúsculas</label>
+        <label><input type="checkbox" id="upper" checked> Letras maiúsculas</label>
+        <label><input type="checkbox" id="numbers" checked> Números</label>
+        <label><input type="checkbox" id="symbols"> Símbolos</label>
+      </div>
+
+      <button onclick="generatePassword()">Gerar senha</button>
+
+      <div class="pill-result">
+        <input type="text" id="result" placeholder="Sua senha aparece aqui" readonly>
+      </div>
+
+      <button onclick="copyPassword()">Copiar senha</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

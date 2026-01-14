@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at right, #3b2200, #000);
+  overflow: hidden;
+  color: #ff9a2f;
+}
+
+/* FUNDO */
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+/* PÍLULAS */
+.pill {
+  position: absolute;
+  width: 180px;
+  height: 46px;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 154, 47, 0.85);
+  transform: rotate(-135deg);
+  animation: float 22s linear infinite;
+  opacity: 0.8;
+}
+
+/* POSIÇÕES DAS PÍLULAS */
+.pill:nth-child(1)  { left: 5%;  top: 90%; animation-duration: 20s; }
+.pill:nth-child(2)  { left: 15%; top: 110%; animation-duration: 24s; }
+.pill:nth-child(3)  { left: 25%; top: 100%; animation-duration: 22s; }
+.pill:nth-child(4)  { left: 35%; top: 120%; animation-duration: 26s; }
+.pill:nth-child(5)  { left: 45%; top: 95%; animation-duration: 21s; }
+.pill:nth-child(6)  { left: 55%; top: 115%; animation-duration: 27s; }
+.pill:nth-child(7)  { left: 65%; top: 105%; animation-duration: 23s; }
+.pill:nth-child(8)  { left: 75%; top: 130%; animation-duration: 28s; }
+.pill:nth-child(9)  { left: 85%; top: 100%; animation-duration: 25s; }
+.pill:nth-child(10) { left: 95%; top: 120%; animation-duration: 29s; }
+
+/* + */
+.plus {
+  position: absolute;
+  color: rgba(255, 154, 47, 0.6);
+  font-size: 26px;
+  animation: floatPlus 18s linear infinite;
+}
+
+/* POSIÇÕES DOS + */
+.plus:nth-child(11) { left: 8%;  top: 95%; }
+.plus:nth-child(12) { left: 18%; top: 115%; animation-duration: 20s; }
+.plus:nth-child(13) { left: 32%; top: 105%; animation-duration: 17s; }
+.plus:nth-child(14) { left: 48%; top: 120%; animation-duration: 22s; }
+.plus:nth-child(15) { left: 62%; top: 100%; animation-duration: 19s; }
+.plus:nth-child(16) { left: 72%; top: 130%; animation-duration: 23s; }
+.plus:nth-child(17) { left: 82%; top: 110%; animation-duration: 21s; }
+.plus:nth-child(18) { left: 92%; top: 125%; animation-duration: 24s; }
+
+/* ANIMAÇÕES */
+@keyframes float {
+  from {
+    transform: translate(0, 0) rotate(-135deg);
+  }
+  to {
+    transform: translate(-450px, -1300px) rotate(-135deg);
+  }
+}
+
+@keyframes floatPlus {
+  from {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-350px, -1100px);
+    opacity: 1;
+  }
+}
+
+/* CONTEÚDO */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 25px;
+  font-size: 32px;
+}
+
+/* CARD */
+.card {
+  width: 320px;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 18px;
+  backdrop-filter: blur(8px);
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 15px;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 15px;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 999px;
+  border: none;
+  background: #ff9a2f;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #ffb45a;
+}
+
+/* PÍLULA RESULTADO */
+.pill-result {
+  margin: 16px 0;
+  transform: rotate(-12deg);
+}
+
+.pill-result input {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 999px;
+  border: 2px solid #ff9a2f;
+  background: transparent;
+  color: #ff9a2f;
+  text-align: center;
+  transform: rotate(12deg);
+}
